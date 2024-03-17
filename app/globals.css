@@ -8,6 +8,25 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+/* custom styles */
+.customContainer {
+  display: grid;
+  grid-template-columns: 115px 340px 2fr;
+  grid-template-rows: auto auto;
+  grid-gap: 10px;
+}
+
+.navBarLeft {
+  grid-column: 1;
+  grid-row: span 2;
+}
+
+.navBarTop {
+  grid-column: 2 / span 2;
+  grid-row: 1;
+}
+/*  */
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;

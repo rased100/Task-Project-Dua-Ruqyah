@@ -12,10 +12,21 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <nav>nav bar</nav>
-        <div>Side bar</div>
-        <div>Right Side bar</div>
-        {children}
+        <div>
+          <div className="customContainer">
+            <div className="navBarLeft">
+              <p>navBarLeft</p>
+            </div>
+
+            <div className="navBarTop">
+              <p>navBarTop</p>
+            </div>
+            <div className="h-fit">
+              <p>Categories</p>
+            </div>
+            <div className="h-fit">{children}</div>
+          </div>
+        </div>
       </body>
     </html>
   );
