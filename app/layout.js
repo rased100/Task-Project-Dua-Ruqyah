@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBarLeft from "./components/NavBarLeft";
+import NavBarTop from "./components/NavBarTop";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +22,8 @@ export default function RootLayout({ children }) {
             </div>
 
             <div className="navBarTop">
-              <p>navBarTop</p>
+              {/* <p>navBarTop</p> */}
+              <NavBarTop />
             </div>
             <div className="h-fit">
               <p>Categories</p>
