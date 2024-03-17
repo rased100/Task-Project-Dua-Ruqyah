@@ -16,10 +16,10 @@
   grid-gap: 10px;
 }
 
-.navBarLeft {
+/* .navBarLeft {
   grid-column: 1;
   grid-row: span 2;
-}
+} */
 
 .navBarTop {
   grid-column: 2 / span 2;
