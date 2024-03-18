@@ -11,11 +11,14 @@ const CustomButton = dynamic(() => import("@/app/components/CustomButton"), {
 });
 
 async function getDuas(categoryId) {
-  const res = await fetch(`http://localhost:8080/api/dua/${categoryId}`, {
-    next: {
-      revalidate: 60,
-    },
-  });
+  const res = await fetch(
+    `https://task-project-dua-ruqyah-backend.onrender.com/api/dua/${categoryId}`,
+    {
+      next: {
+        revalidate: 60,
+      },
+    }
+  );
   return res.json();
 }
 

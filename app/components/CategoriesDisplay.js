@@ -14,7 +14,7 @@ const CategoriesDisplay = ({ categories }) => {
     const fetchSubCategories = async () => {
       try {
         const res = await fetch(
-          `http://localhost:8080/api/subcategories/${selectedCategoryId}`
+          `https://task-project-dua-ruqyah-backend.onrender.com/api/subcategories/${selectedCategoryId}`
         );
         const data = await res.json();
         setSubCategories(data);
@@ -31,7 +31,7 @@ const CategoriesDisplay = ({ categories }) => {
     const fetchSubCategoryDuas = async () => {
       try {
         const res = await fetch(
-          `http://localhost:8080/api/dua/subCategory/${selectedSubCategoryId}`
+          `https://task-project-dua-ruqyah-backend.onrender.com/api/dua/subCategory/${selectedSubCategoryId}`
         );
         const data = await res.json();
         setSubCategoryDuas(data);

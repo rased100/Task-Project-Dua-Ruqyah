@@ -12,7 +12,9 @@ const CategoryInfo = dynamic(
 );
 
 async function fetchCategories() {
-  const res = await fetch("http://localhost:8080/api/categories");
+  const res = await fetch(
+    "https://task-project-dua-ruqyah-backend.onrender.com/api/categories"
+  );
   return res.json();
 }
 
