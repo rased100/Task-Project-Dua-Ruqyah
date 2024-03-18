@@ -3,6 +3,7 @@ import Image from "next/image";
 import duaCardLogo from "@/public/duas/card.svg";
 import { Toaster } from "react-hot-toast";
 import dynamic from "next/dynamic";
+import Sidebar from "@/app/components/Sidebar";
 
 const CustomButton = dynamic(() => import("@/app/components/CustomButton"), {
   ssr: false,
@@ -22,8 +23,9 @@ const DuaCards = async ({ params }) => {
   const duas = await getDuas(categoryId);
 
   return (
-    <div className="h-[calc(100vh-80px)]">
+    <div className="h-[calc(100vh-80px)] flex">
       <Toaster />
+
       <div className="h-full overflow-auto">
         {duas.map((dua) => (
           <div
@@ -75,6 +77,10 @@ const DuaCards = async ({ params }) => {
           </div>
         ))}
       </div>
+      {/* <div>
+        <p>rased</p>
+      </div> */}
+      <Sidebar />
     </div>
   );
 };

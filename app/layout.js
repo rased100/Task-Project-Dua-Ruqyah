@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className="bg-slate-200">
       <body className={inter.className}>
         <div>
-          <div className="customContainer">
+          <div className="customContainer ">
             <div className="col-span-1 row-span-2 lg:ml-4">
               {/* <p>navBarLeft</p> */}
               <NavBarLeft />
