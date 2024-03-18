@@ -86,10 +86,23 @@ const DuaCards = async ({ params }) => {
             </div>
           ))}
         </div>
-        {/* <div>
-        <p>rased</p>
-      </div> */}
-        <Sidebar />
+        <div className="">
+          <div className="drawer drawer-end 2xl:h-[84vh] 2xl:drawer-open">
+            <input
+              id="drawer-sidebar"
+              type="checkbox"
+              className="drawer-toggle"
+            />
+            <div className="drawer-side">
+              <label
+                htmlFor="drawer-sidebar"
+                aria-label="close sidebar"
+                className="drawer-overlay"
+              ></label>
+              <Sidebar />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
