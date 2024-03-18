@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBarLeft from "./components/NavBarLeft";
 import NavBarTop from "./components/NavBarTop";
+import DuaCategories from "./components/DuaCategories";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +27,8 @@ export default function RootLayout({ children }) {
               <NavBarTop />
             </div>
             <div className="h-fit">
-              <p>Categories</p>
+              {/* <p>Categories</p> */}
+              <DuaCategories />
             </div>
             <div className="h-fit">{children}</div>
           </div>

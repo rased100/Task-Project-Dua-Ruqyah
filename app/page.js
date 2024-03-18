@@ -1,9 +1,7 @@
 // import Image from "next/image";
 
+import { redirect } from "next/navigation";
+
 export default function Home() {
-  return (
-    <main>
-      <div>Dua-Ruqyah Project</div>
-    </main>
-  );
+  return redirect("/duas/1");
 }
