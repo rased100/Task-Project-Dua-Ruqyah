@@ -34,15 +34,22 @@ const DuaCategories = () => {
     <div>
       {/* <div className="drawer drawer-end 2xl:h-[84vh] xl:drawer-open bg-red-100"> */}
       <div className="drawer lg:drawer-open">
-        <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content flex flex-col items-center justify-center">
-          <label htmlFor="my-drawer-2" className="drawer-button lg:hidden">
+        <input
+          id="categoriesdrawer"
+          type="checkbox"
+          className="drawer-toggle"
+        />
+        <div className=" drawer-content flex flex-col  justify-center bg-base-100 rounded-xl mb-5">
+          <label
+            htmlFor="categoriesdrawer"
+            className="drawer-button lg:hidden py-4 pl-10 "
+          >
             <FaBars />
           </label>
         </div>
-        <div className="drawer-side h-[calc(100vh-93px)]">
+        <div className=" drawer-side h-[calc(100vh-93px)]">
           <label
-            htmlFor="my-drawer-2"
+            htmlFor="categoriesdrawer"
             aria-label="close sidebar"
             className="drawer-overlay"
           ></label>
