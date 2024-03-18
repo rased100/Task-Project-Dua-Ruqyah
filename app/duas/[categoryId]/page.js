@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import duaCardLogo from "@/public/duas/card.svg";
+import logo from "@/public/duas/card.svg";
 import { Toaster } from "react-hot-toast";
 import dynamic from "next/dynamic";
 import Sidebar from "@/app/components/Sidebar";
@@ -43,30 +43,30 @@ const DuaCards = async ({ params }) => {
               className="mb-5 p-6 bg-base-100 rounded-xl"
             >
               <div className="flex items-center gap-3">
-                <Image src={duaCardLogo} alt="icon" />
-                <h3 className="font-semibold text-green-600">
+                <Image src={logo} alt="icon" />
+                <h2 className="font-bold text-green-600">
                   {dua.dua_id}. {dua.dua_name_en}
-                </h3>
+                </h2>
               </div>
 
-              <div className="text-xl">
+              <div className="text-lg">
                 {dua.top_en && <p className="mt-5">{dua.top_en}</p>}
                 {dua.dua_arabic && (
-                  <p className="text-right text-2xl tracking-wider font-bold my-8">
-                    {dua.dua_arabic}
-                  </p>
+                  <p className="text-right text-3xl my-10">{dua.dua_arabic}</p>
                 )}
                 {dua.transliteration_en && (
-                  <p className="italic my-5 text-slate-700">
-                    <span className="font-semibold text-xl ">
+                  <p className="italic my-10 text-gray-700">
+                    <span className="font-bold text-xl ">
                       Transliteration:{" "}
                     </span>
                     {dua.transliteration_en}
                   </p>
                 )}
                 {dua.translation_en && (
-                  <p className="my-5 text-slate-600">
-                    <span className="font-semibold">Translation: </span>
+                  <p className="my-5 text-gray-800">
+                    <span className="font-bold text-gray-800">
+                      Translation:{" "}
+                    </span>
                     {dua.translation_en}
                   </p>
                 )}

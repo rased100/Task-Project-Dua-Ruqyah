@@ -8,10 +8,9 @@ import pauseBtnImg from "@/public/btn/pausebtn.svg";
 import { IoCopyOutline } from "react-icons/io5";
 import { CiBookmark } from "react-icons/ci";
 import { IoBulbOutline } from "react-icons/io5";
-import { FaShareAlt } from "react-icons/fa";
+import { FiShare2 } from "react-icons/fi";
 import { TbInfoOctagon } from "react-icons/tb";
 import { ImLoop } from "react-icons/im";
-// import "@/app/globals.css";
 
 const CustomButton = ({ dua }) => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -230,15 +229,15 @@ const CustomButton = ({ dua }) => {
                     audioRef.current.currentTime = time;
                     setCurrentTime(time);
                   }}
-                  className="appearance-none w-[130px] bg-slate-300 h-1 rounded-full outline-none"
+                  className="appearance-none w-[130px] bg-gray-300 h-1 rounded-full outline-none"
                 />
-                <span className="text-slate-600 mx-4">
+                <span className="text-gray-600 mx-4">
                   {formatTime(totalDuration - currentTime)}
                 </span>
                 <button onClick={() => setIsLooping(!isLooping)}>
                   <ImLoop
                     className={`text-xl ${
-                      isLooping ? "text-slate-900" : "text-slate-500"
+                      isLooping ? "text-gray-900" : "text-gray-500"
                     }`}
                   />
                 </button>
@@ -247,24 +246,24 @@ const CustomButton = ({ dua }) => {
           </div>
         )}
       </div>
-      <div className="flex gap-4">
+      <div className="flex gap-6">
         <button onClick={handleCopy} title="Copy">
-          <IoCopyOutline className="text-slate-500 text-2xl" />
+          <IoCopyOutline className="text-gray-500 text-3xl" />
         </button>
         <button
           title="Bookmark"
           onClick={() => document.getElementById("bookmark_modal").showModal()}
         >
-          <CiBookmark className="text-slate-500 text-2xl" />
+          <CiBookmark className="text-gray-500 text-3xl" />
         </button>
         <button onClick={handleComingSoonToast} title="Memorize">
-          <IoBulbOutline className="text-slate-500 text-2xl" />
+          <IoBulbOutline className="text-gray-500 text-3xl" />
         </button>
         <button onClick={handleComingSoonToast} title="Share">
-          <FaShareAlt className="text-slate-500 text-2xl" />
+          <FiShare2 className="text-gray-500 text-2xl" />
         </button>
         <button onClick={handleComingSoonToast} title="Report">
-          <TbInfoOctagon className="text-slate-500 text-2xl" />
+          <TbInfoOctagon className="text-gray-500 text-3xl" />
         </button>
       </div>
 
@@ -301,7 +300,7 @@ const CustomButton = ({ dua }) => {
               />
             </div>
             <input
-              className="px-4 py-2 m-4 bg-green-600 text-slate-200 font-semibold rounded-md"
+              className="px-4 py-2 m-4 bg-green-600 text-gray-200 font-semibold rounded-md"
               type="submit"
               value="Save"
             />

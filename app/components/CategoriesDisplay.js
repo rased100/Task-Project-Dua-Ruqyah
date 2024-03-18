@@ -10,7 +10,6 @@ const CategoriesDisplay = ({ categories }) => {
   const [subCategoryDuas, setSubCategoryDuas] = useState([]);
 
   useEffect(() => {
-    // Fetch subcategories during build time
     const fetchSubCategories = async () => {
       try {
         const res = await fetch(
@@ -27,7 +26,6 @@ const CategoriesDisplay = ({ categories }) => {
   }, [selectedCategoryId]);
 
   useEffect(() => {
-    // Fetch subcategory duas during build time
     const fetchSubCategoryDuas = async () => {
       try {
         const res = await fetch(
@@ -55,12 +53,12 @@ const CategoriesDisplay = ({ categories }) => {
                 <Image src={duar_gurutto} alt="icon" width={100} height={100} />
               </div>
               <div>
-                <h3 className="text-xl">{category.cat_name_en}</h3>
+                <h3 className="text-md font-bold">{category.cat_name_en}</h3>
                 <p>Sub Category: {category.no_of_subcat}</p>
               </div>
             </div>
             {selectedCategoryId === category.cat_id && (
-              <div className="border-l-2 border-dashed border-[#00A661] ml-10 px-2">
+              <div className="border-l-2 border-dashed border-gray-500 ml-10 px-2">
                 {subCategories.map((subCategory) => (
                   <div
                     className="flex flex-col justify-start items-start"
@@ -70,7 +68,7 @@ const CategoriesDisplay = ({ categories }) => {
                       onClick={() =>
                         setSelectedSubCategoryId(subCategory.subcat_id)
                       }
-                      className="font-semibold block my-2 text-[#00A661]"
+                      className="font-bold block my-2 text-gray-500"
                     >
                       {subCategory.subcat_name_en}
                     </h5>
