@@ -11,15 +11,15 @@
 /* custom styles */
 .customContainer {
   display: grid;
-  grid-template-columns: 115px 340px 2fr;
+  /* grid-template-columns: 115px 340px 2fr; */
   grid-template-rows: auto auto;
   grid-gap: 10px;
 }
 
-/* .navBarLeft {
+.navBarLeft {
   grid-column: 1;
   grid-row: span 2;
-} */
+}
 
 .navBarTop {
   grid-column: 2 / span 2;

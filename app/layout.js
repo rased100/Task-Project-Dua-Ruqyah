@@ -13,11 +13,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="bg-slate-200">
+    <html lang="en" className="bg-base-100">
       <body className={inter.className}>
         <div>
           <div className="customContainer ">
-            <div className="col-span-1 row-span-2 lg:ml-4">
+            <div className="navBarLeft">
               {/* <p>navBarLeft</p> */}
               <NavBarLeft />
             </div>
@@ -26,10 +26,7 @@ export default function RootLayout({ children }) {
               {/* <p>navBarTop</p> */}
               <NavBarTop />
             </div>
-            <div className="h-fit">
-              {/* <p>Categories</p> */}
-              <DuaCategories />
-            </div>
+
             <div className="h-fit">{children}</div>
           </div>
         </div>

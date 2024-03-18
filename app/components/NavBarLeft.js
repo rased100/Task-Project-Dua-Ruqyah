@@ -13,7 +13,7 @@ import IconBook from "@/public/Book.svg";
 
 const NavBarLeft = () => {
   return (
-    <nav className="flex flex-col lg:flex-row items-center px-4 py-7 rounded-3xl bg-base-100 lg:h-[calc(100vh-40px)] lg:flex-col fixed lg:static bottom-0 w-full justify-between lg:w-fit lg:mt-6 mx-6">
+    <nav className="flex flex-row items-center p-5 rounded-3xl bg-base-100 lg:h-[calc(100vh-40px)] lg:flex-col fixed lg:static bottom-0 w-full justify-between lg:w-fit lg:mt-6 mx-6">
       <div className="w-fit">
         <Link href="/">
           <Image className="" width={50} src={logo} alt="Dua" />
