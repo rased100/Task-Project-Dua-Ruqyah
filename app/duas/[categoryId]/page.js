@@ -99,7 +99,7 @@ const DuaCards = async ({ params }) => {
                 aria-label="close sidebar"
                 className="drawer-overlay"
               ></label>
-              {/* <Sidebar /> */}
+              <Sidebar />
             </div>
           </div>
         </div>
